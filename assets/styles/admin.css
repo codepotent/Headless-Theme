@@ -1,0 +1,18 @@
+/**
+ * -----------------------------------------------------------------------------
+ * Purpose: Core headless theme styles.
+ * Copyright 2020, Code Potent, https://codepotent.com
+ * -----------------------------------------------------------------------------
+ */
+
+/* Customizer panels. */
+.accordion-section:not(:first-child) {
+	display:none !important;
+	}
+
+/* Customizer theme note. */
+#customize-theme-controls .customize-pane-parent li p {
+	font-size:18px;
+	margin:0;
+	padding:10px 10px 25px 25px;
+	}
