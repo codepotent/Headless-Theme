@@ -17,11 +17,12 @@ if ($_SERVER['REQUEST_URI'] !== get_site_url(null, '', 'relative').'/') {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>>
 <head>
-<meta charset="UTF-8">
+<meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php bloginfo('site_name'); ?></title>
+
 <?php wp_head(); ?>
+
 </head>
-<body>
+<body <?php body_class(); ?>>

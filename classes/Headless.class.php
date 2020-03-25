@@ -39,6 +39,9 @@ class Headless {
 	 */
 	private function init() {
 
+		// Add title support.
+		add_theme_support('title-tag');
+
 		// Enqueue public styles.
 		add_action('wp_enqueue_scripts', [$this, 'enqueue_public_assets']);
 
@@ -92,10 +95,10 @@ class Headless {
 	public function enqueue_admin_assets() {
 
 		// Enqueue admin styles.
-		wp_enqueue_style('headless-theme', WP_CONTENT_URL.'/themes/codepotent-headless/assets/styles/admin.css');
+		wp_enqueue_style('headless-theme', get_template_directory_uri().'/assets/styles/admin.css');
 
 		// Enqueue admin scripts.
-		wp_enqueue_script('headless-theme', WP_CONTENT_URL.'/themes/codepotent-headless/assets/scripts/admin.js', ['jquery'], time());
+		wp_enqueue_script('headless-theme', get_template_directory_uri().'/assets/scripts/admin.js', ['jquery'], time());
 
 		// Localize a notice for use in the enqueued script.
 		wp_localize_script('headless-theme', 'theme_info', sprintf(
@@ -118,7 +121,7 @@ class Headless {
 	public function enqueue_public_assets() {
 
 		// Enqueue admin styles.
-		wp_enqueue_style('headless-theme', WP_CONTENT_URL.'/themes/codepotent-headless/assets/styles/public.css');
+		wp_enqueue_style('headless-theme', get_template_directory_uri().'/assets/styles/public.css');
 
 	}
 

@@ -8,6 +8,9 @@ if (!defined('ABSPATH')) {
 	die();
 }
 
+// Include any enqueued footer code.
+wp_footer();
+
 ?>
 
 </body>
